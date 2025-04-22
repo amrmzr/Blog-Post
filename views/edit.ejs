@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container mt-5">
+    <h2>Edit Blog Post</h2>
+    <form action="/update/<%= id %>" method="post">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="<%= title %>" required>
+
+        <label for="blog-post" class="form-label">Post</label>
+        <textarea class="form-control" id="blog-post" name="blog-post" rows="3" required><%= content %></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+
+  <%- include('partials/footer.ejs') %>

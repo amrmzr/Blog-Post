@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.heading {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin: 1rem 1rem;
+}
+.site-bio {
+  margin: 0 1rem;
+  padding: 0.25rem;
+  font-weight: 500;
+}
+.nav-btns {
+  column-gap: 1rem;
+}
+.post-btns {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  column-gap: 0.5rem;
+}
+.footer {
+  text-align: center;
+  background-color: #433d3d;
+  padding: 1rem;
+  color: #fff;
+}
+.nav-link:hover,
+.nav-link:active,
+.selected {
+  color: #111;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.custom-alert {
+  position: fixed;
+  opacity: 1;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  background-color: #28a745;
+}
+.hidden {
+  opacity: 0;
+  /* Optional: Reduce height smoothly */
+  /* max-height: 0; */
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
+  /* margin-bottom: 0; */
+  /* border: 0; */
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out,
+    padding 0.5s ease-out, margin 0.5s ease-out, border 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

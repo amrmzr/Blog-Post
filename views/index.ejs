@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+
+  <form action="/" method="post">
+    <div class="container mt-5">
+      <h2>Blog Post</h2>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" required>
+
+        <label for="blog-post" class="form-label">Post</label>
+        <textarea class="form-control" id="blog-post" name="blog-post" rows="3" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  <div class="container mt-5 mb-5 padding-2">
+    <% if (locals.posts.length>0){ %>
+      <h2>Blog Posts</h2>
+      <% for (let i=0; i < locals.posts.length; i++) { %>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= locals.posts[i].title %>
+            </h5>
+            <p class="card-text">
+              <%= locals.posts[i].content %>
+            </p>
+          </div>
+          <div class="post-btns d-flex flex-row">
+            <button type="button" class="btn btn-info" onclick="location.href='/edit/<%=i%>'">Edit</button>
+            <button type="button" class="btn btn-danger" onclick="location.href='/delete/<%=i%>'">Delete</button>
+          </div>
+        </div>
+        <% } %>
+
+          <%} %>
+  </div>
+
+  <%- include('partials/footer.ejs') %>
