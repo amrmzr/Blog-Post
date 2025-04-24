@@ -7,17 +7,17 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-
 .heading {
   font-family: 'Noto Sans', sans-serif;
   font-style: normal;
+  padding: 0;
   font-weight: 700;
-  margin-top: 1rem;
-  margin: 1rem 1rem;
+  cursor: pointer;
 }
 .site-bio {
-  margin: 0 1rem;
-  padding: 0.25rem;
+  text-decoration: none;
+  color: black;
+  padding: 0;
   font-weight: 500;
 }
 .nav-btns {
@@ -37,10 +37,11 @@ body {
 .nav-link:hover,
 .nav-link:active,
 .selected {
-  color: #111;
-  background-color: #fff;
+  color: #fff;
+  opacity: 1;
+  background-color: #2b2b2b;
   border-radius: 0.5rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .custom-alert {
   position: fixed;
@@ -54,19 +55,12 @@ body {
   font-weight: bold;
   color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  animation: fadeIn 0.5s, fadeOut 0.5s 5s;
   background-color: #28a745;
+  overflow: hidden;
 }
 .hidden {
   opacity: 0;
-  /* Optional: Reduce height smoothly */
-  /* max-height: 0; */
-  /* padding-top: 0; */
-  /* padding-bottom: 0; */
-  /* margin-bottom: 0; */
-  /* border: 0; */
-  transition: opacity 0.5s ease-out, max-height 0.5s ease-out,
-    padding 0.5s ease-out, margin 0.5s ease-out, border 0.5s ease-out;
 }
 
 @keyframes fadeIn {

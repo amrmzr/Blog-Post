@@ -31,13 +31,13 @@ app.post('/contact', (req, res) => {
     message: `Thank you, ${user}! Your feedback has been received.`,
   });
 });
-app.post('/', (req, res) => {
+app.post('/saved', (req, res) => {
   const title = req.body['title'];
   const content = req.body['blog-post'];
   const post = { title, content };
   posts.push(post);
   // console.log(posts);
-  res.render('index.ejs', { posts });
+  res.redirect('/');
 });
 
 app.get('/edit/:id', (req, res) => {

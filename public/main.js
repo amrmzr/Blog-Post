@@ -19,7 +19,7 @@ const notification = document.querySelector('.custom-alert');
 
 // Check if the notification element exists on the page
 if (notification) {
-  // Set a timer for 3000 milliseconds (3 seconds)
+  // Set a timer for 5000 milliseconds (5 seconds)
   setTimeout(() => {
     // Add the 'hidden' class to start the fade-out effect
     notification.classList.add('hidden');
@@ -27,5 +27,5 @@ if (notification) {
     //  setTimeout(() => {
     //    notification.remove();
     // }, 500); // Match the transition duration in CSS
-  }, 3000); // 3 seconds delay
+  }, 5000); // 5 seconds delay
 }

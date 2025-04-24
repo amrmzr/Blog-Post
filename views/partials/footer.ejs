@@ -1,9 +1,86 @@
 </main>
-<footer class="mt-5">
-  <div class="container-fluid footer ">
-    <p class="mb-0">Copyright <%= new Date().getFullYear()%>.</p>
-    <p>All rights reserved.</p>
-  </div>
+<footer class="footer bg-dark text-white pt-5 pb-4 mt-auto">
+  <%# mt-auto helps push footer down in flex layouts %>
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+
+        <%# Optional: Company Info/Brand Column %>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 fw-bold text-warning">amrmzr</h5>
+            <p>
+              Eager to build projects, experiment with code, and grow their skills while gaining hands-on experience in
+              designing and deploying functional, user-friendly websites.
+            </p>
+          </div>
+
+          <%# Optional: Quick Links Column %>
+            <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 fw-bold text-warning">Links</h5>
+              <p>
+                <a href="/about" class="text-white" style="text-decoration: none;">About Us</a>
+              </p>
+              <p>
+                <a href="/contact" class="text-white" style="text-decoration: none;">Contact</a>
+              </p>
+            </div> -->
+
+            <%# Contact Info Column %>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">Contact</h5>
+                <p><i class="fas fa-home me-3"></i> Bahrain</p>
+                <%# Using Font Awesome here - see setup note %>
+                  <p><i class="fas fa-envelope me-3"></i>xyz@hotmail.com</p>
+                  <p><i class="fas fa-phone me-3"></i> +973 12345678</p>
+                  <%# Example Bahrain number %>
+              </div>
+
+      </div>
+      <%# End of row %>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+          <%# Copyright Section %>
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <p class="mb-3 mb-md-0">
+                Copyright ©<%= new Date().getFullYear() %> All rights reserved.
+              </p>
+            </div>
+
+            <%# Social Media Links Section %>
+              <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-end">
+                  <ul class="list-unstyled list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="#" target="_blank" class="btn-floating btn-sm text-white footer-icon-link"
+                        aria-label="Facebook">
+                        <i class="bi bi-facebook fs-4"></i>
+                        <%# Bootstrap Icon %>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" target="_blank" class="btn-floating btn-sm text-white footer-icon-link"
+                        aria-label="Instagram">
+                        <i class="bi bi-instagram fs-4"></i>
+                        <%# Bootstrap Icon %>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <%# Replace YOUR_NUMBER with your WhatsApp number including country code, no '+' or spaces %>
+                        <a href="#" target="_blank" class="btn-floating btn-sm text-white footer-icon-link"
+                          aria-label="WhatsApp">
+                          <i class="bi bi-whatsapp fs-4"></i>
+                          <%# Bootstrap Icon %>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+        <%# End of row %>
+
+    </div>
+    <%# End of container %>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="/main.js"></script>
