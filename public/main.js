@@ -1,6 +1,6 @@
 // Get all nav-link elements
 const currentPagePath = window.location.pathname;
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav__link');
 const isHomePage = currentPagePath === '/';
 // Add click event listener to each nav-link
 navLinks.forEach((link) => {

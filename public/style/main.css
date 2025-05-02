@@ -1,48 +1,82 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-.heading {
-  font-family: 'Noto Sans', sans-serif;
+body .navbar {
+  background: #222831;
+}
+body .navbar__heading {
+  font-family: "Noto Sans", sans-serif;
   font-style: normal;
+  color: #dfd0b8;
   padding: 0;
   font-weight: 700;
   cursor: pointer;
-}
-.site-bio {
+  font-size: 2rem;
   text-decoration: none;
-  color: black;
-  padding: 0;
+}
+body .navbar__site--bio {
+  text-decoration: none;
+  color: #f0bb78;
+  padding: 0 0 0.5rem;
   font-weight: 500;
 }
-.nav-btns {
-  column-gap: 1rem;
+body .navbar-nav {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
-.post-btns {
+body .nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+body .nav__link:hover {
+  color: #222831;
+  opacity: 1;
+  background-color: #f0bb78;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+body .container .btn:active {
+  transform: scale(0.97) !important;
+}
+body .container .btn-primary {
+  background-color: #f0bb78 !important;
+  border: 0;
+  color: #222831 !important;
+}
+body .container .btn-primary:hover {
+  background-color: #f0b000 !important;
+  color: #222831 !important;
+}
+body .container .btn-primary:active {
+  background-color: #f0bc00 !important;
+  color: #222831 !important;
+}
+body .container .post-btns {
   margin: 1rem 0.5rem;
   padding: 0.5rem;
-  column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
+
 .footer {
   text-align: center;
-  background-color: #433d3d;
+  background-color: #222831;
   padding: 1rem;
   color: #fff;
 }
-.nav-link:hover,
-.nav-link:active,
-.selected {
-  color: #fff;
-  opacity: 1;
-  background-color: #2b2b2b;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
+.footer--brand {
+  color: #f0bb78;
 }
+
 .custom-alert {
   position: fixed;
   opacity: 1;
@@ -59,6 +93,14 @@ body {
   background-color: #28a745;
   overflow: hidden;
 }
+
+.selected {
+  color: #222831 !important;
+  background-color: #f0bb78;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
 .hidden {
   opacity: 0;
 }
@@ -73,7 +115,6 @@ body {
     transform: translateY(0);
   }
 }
-
 /* Fade-out animation */
 @keyframes fadeOut {
   from {
@@ -84,4 +125,4 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
-}
+}/*# sourceMappingURL=main.css.map */

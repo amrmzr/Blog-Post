@@ -1,7 +1,7 @@
 <%- include('partials/header.ejs') %>
 
   <form action="/saved" method="post">
-    <div class="container mt-5">
+    <div class="container w-50 mt-5">
       <h2>Blog Post</h2>
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -14,7 +14,7 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
-  <div class="container mt-5 mb-5 padding-2">
+  <div class="container w-50 mt-5 mb-5 padding-2">
     <% if (locals.posts.length>0){ %>
       <h2>Blog Posts</h2>
       <% for (let i=0; i < locals.posts.length; i++) { %>
